@@ -110,5 +110,17 @@ menuItems.forEach((item, index)=>{
 currentProductColors.forEach((color, index) => {
     color.addEventListener("click", () => {
         currentProductImg.src = choosenProduct.colors[index].img;
-    })
-})
+    });
+});
+
+currentProductSizes.forEach((size, index) => {
+    size.addEventListener("click", () => {
+        currentProductSizes.forEach(size, () => {
+            size.style.backgroundColor = "white";
+            size.style.color = "black";
+        });
+
+        size.style.backgroundColor = "black";
+        size.style.color = "white";
+    });
+});
